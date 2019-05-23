@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Loan Buddy" />
+        <meta name="description" content="Loan Buddy" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="Loan Buddy" />
+        <link rel="shortcut icon" type="images/x-icon" href="images/favicon.ico"/>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <title>Loan Buddy</title>
+    </head>
+    <body>
+    
+    	<div class="full-wrapper site-header">
+            <div class="section-wrapper top-bar">
+                <div class="nt-grid">
+                    <div class="tb-constrain">
+                        <div class="nt-row">
+                            <div class="colm colm-span6">
+								<div class="tb-social">
+                                	<ul>
+                                    	<li><a href="#"> Home </a></li>
+                                        <li><a href="#"> Blog </a></li>
+                                        <li><a href="#"> News </a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- end .col6 first section -->
+                            <div class="colm colm-span6">                                
+                                <div class="sub-menu clear">
+                                    <ul>
+                                        <li><a href="#"> Apply Online </a></li>
+                                        <li><a href="login.html"><span> <i class="fa fa-lock"></i> Login</span></a></li>
+                                    </ul>                                 
+                                </div><!-- end .tb-buttons section -->                               
+                            </div><!-- end .col6 last section -->
+                        </div><!-- end .nt-row section -->	               
+                    </div><!-- end .tb-constrain section -->
+                </div><!-- end .nt-grid section -->
+            </div><!-- end .section-wrapper .top-bar section -->
+
+            <div class="section-wrapper main-header"> 
+               <div class="nt-grid">
+                    <header>
+                        <div class="nt-row">
+                            <div class="colm colm-span3">
+                                <div id="logo">
+                                    <a href="#"> Buddy <span> Loans </span> </a>
+                                </div><!-- End #logo Section -->                        
+                            </div><!-- end .col3 section -->
+                            <div class="colm colm-span9">
+                               <div class="nav clear">
+                                    <ul class="dropdown clear">
+                                        <li><a href="#">Apply Now</a></li>
+                                        <li class="sub">
+                                        	<a href="#">Our Loans <i class="fa fa-angle-down"></i></a>
+                                            <ul>
+                                                <li><a href="#">Home Loans</a></li>
+                                                <li><a href="#">Salary Loans</a></li>
+                                                <li><a href="#">School Fees Loans</a></li>
+                                                <li><a href="#">Business Loans</a></li>
+                                                <li><a href="#">Wedding Loans</a></li> 
+                                            </ul>                    
+                                        </li>
+                                        <li class="sub">
+                                        	<a href="#">Resources <i class="fa fa-angle-down"></i> </a>
+                                            <ul>
+                                                <li><a href="#">Loans Calculator</a></li>
+                                                <li><a href="#">Guarantor Guide</a></li>
+                                                <li><a href="#">Buddy Budget Tools</a></li>
+                                                <li><a href="#">Credit Report Guide</a></li>
+                                                <li><a href="#">Infographics</a></li>           
+                                            </ul>                    
+                                        </li>
+                                        <li><a href="#"> About Us </a></li>
+                                        <li><a href="#"> Faqs </a></li>
+                                        <li><a href="#"> Contact us </a></li>
+                                    </ul>
+                                </div><!-- End #nav Section -->                        
+                            </div><!-- end .col9 section -->
+                        </div><!-- end .nt-row section -->                                              
+                    </header>
+               </div><!-- end .nt-grid section -->    
+            </div><!-- end .section-wrapper main-header section -->        
+        </div><!-- .full-wrapper -->
+        
+        <div class="full-wrapper loan-intro">
+        	<div class="loan-intro-inner">
+            	<div class="nt-grid">
+                	<div id="widget" class="loan-calc">
+                    	<div class="nt-row">
+                        	<div class="colm colm-span7">
+                            
+                            	<div class="slider-sect amt">
+                                	<div class="nt-row">
+                                    	<div class="colm colm-span8">
+                                        	<h3>Select Loan <b>Amount</b> </h3>
+                                        </div>
+                                        <div class="colm colm-span4">
+                                        	<div class="amt-text">
+                                            	<span class="figsup">UGX</span>
+                                            	<span id="la_value" class="vishidden"> </span>
+                                                <span id="loan_amt_v"> </span>
+                                            </div><!-- amt-text -->
+                                        </div>
+                                    </div><!-- nt-row -->
+                                    <div class="slider-holder">
+                                        <div class="slider-wrapper">
+                                            <div id="slider1"></div>
+                                        </div>
+                                    </div><!-- slider-holder -->
+                                </div><!-- slider-sect -->
+                                
+                            	<div class="slider-sect amt">
+                                	<div class="nt-row">
+                                    	<div class="colm colm-span8">
+                                        	<h3>Select Loan <b>Term</b></h3>
+                                        </div>
+                                        <div class="colm colm-span4">
+                                        	<div class="amt-text">
+                                            	<span id="nm_value"> </span>
+                                                <span class="fsmall">Months</span>
+                                            </div><!-- amt-text -->
+                                        </div>
+                                    </div><!-- nt-row -->
+                                    <div class="slider-holder">
+                                        <div class="slider-wrapper">
+                                            <div id="slider2"></div>
+                                        </div>                                    
+                                    </div><!-- slider-holder -->
+                                </div><!-- slider-sect --> 
+                                
+                            	<div class="slider-sect amt">
+                                	<div class="nt-row">
+                                    	<div class="colm colm-span8">
+                                        	<h3>Select <b>Interest Rate</b></h3>
+                                        </div>
+                                        <div class="colm colm-span4">
+                                        	<div class="amt-text">
+                                            	<span id="roi_value"></span>
+                                                <span class="fsmall">%</span>
+                                            </div><!-- amt-text -->
+                                        </div>
+                                    </div><!-- nt-row -->
+                                    <div class="slider-holder">
+                                        <div class="slider-wrapper">
+                                            <div id="slider3"></div>
+                                        </div>                                    
+                                    </div><!-- slider-holder -->
+                                </div><!-- slider-sect -->
+                                
+                                <div class="loan-calc-footer f-desktop">
+                                    <div class="loan-calc-footer-inner">
+                                        <div class="loan-calc-footer-wrap">
+                                            <div class="nt-row">
+                                                <div class="colm colm-span7">
+                                                    <a class="btn-f btn-arrow" href="#">Get My Loan</a>
+                                                </div>
+                                                <div class="colm colm-span5">
+                                                    <ul class="fa-ul check">
+                                                        <li><i class="fa fa-li fa-check"></i>We're a <b>Direct Lender</b></li>
+                                                        <li><i class="fa fa-li fa-check"></i><b>No</b> up front <b>Broker Fees</b></li>
+                                                        <li><i class="fa fa-li fa-lock"></i> <b>Secure</b> Connection</li>
+                                                    </ul>                                                
+                                                </div>                                                
+                                            </div>
+                                        </div><!-- loan-calc-footer-wrap -->
+                                    </div><!-- loan-calc-footer-inner -->
+                                </div><!-- loan-calc-footer -->                                
+                                    
+                            </div><!-- end .col7 section -->
+                            <div class="colm colm-span5">
+                            	<div class="loan-details">
+                                    <div class="table-row">
+                                        <h3>Your loan <span>details</span></h3>
+                                        <table class="loan-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>You want to borrow:</td>
+                                                    <td>
+                                                    	<div class="amfig">
+                                                        	<span class="figsup">UGX</span>
+                                                        	<span id="loan_amt"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Over a period of:</td>
+                                                    <td>
+                                                        <div class="amfig">
+                                                        	<span id="loan_pd"></span>
+                                                            <span class="fsmall">months</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Repaying:</td>
+                                                    <td>
+                                                        <div class="amfig">
+                                                        	<span class="figsup">UGX</span>
+                                                        	<span id="emi"></span>
+                                                            <span class="fsmall">pm</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total repayable:</td>
+                                                    <td>
+                                                    	<div class="amfig">
+                                                        	<span class="figsup">UGX</span>
+                                                        	<span id="tbl_full"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Interest Percentage:</td>
+                                                    <td>
+                                                    	<div class="amfig">
+                                                        	<span id="tbl_int_pge"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Interest:</td>
+                                                    <td>
+                                                    	<div class="amfig">
+                                                        	<span class="figsup">UGX</span>
+                                                    		<span id="tbl_int"></span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><!-- table-row -->
+                                </div><!-- loan-details -->                            
+                            </div><!-- end .col5 section -->
+                        </div><!-- end .nt-row section -->
+                        
+                        <div class="loan-calc-footer f-mobile">
+                        	<div class="loan-calc-footer-inner">
+                            	<div class="loan-calc-footer-wrap">
+                                    <div class="nt-row">
+                                        <div class="colm colm-span7">
+                                            <a class="btn-f btn-arrow" href="#">Get My Loan</a>
+                                        </div>
+                                        <div class="colm colm-span5">
+                                            <ul class="fa-ul check">
+                                                <li><i class="fa fa-li fa-check"></i>We're a <b>Direct Lender</b></li>
+                                                <li><i class="fa fa-li fa-check"></i><b>No</b> up front <b>Broker Fees</b></li>
+                                                <li><i class="fa fa-li fa-lock"></i> <b>Secure</b> Connection</li>
+                                            </ul>                                                
+                                        </div>                                                
+                                    </div>
+                                </div><!-- loan-calc-footer-wrap -->
+                            </div><!-- loan-calc-footer-inner -->
+                        </div><!-- loan-calc-footer -->
+                    </div><!-- loan-calc -->
+                    <div class="guarantor-loans">
+                        <div class="col-center">
+                            <h1 class="main-title"> <strong>Guarantor Loans</strong> </h1>
+                            <h2 class="main-title">Borrow <strong>up to UGX 5,000,000</strong> with the <strong>UG's friendliest <br> Guarantor loans</strong> website</h2>
+                        </div><!-- col-center -->                    
+                    </div><!-- guarantor-loans -->
+                </div><!-- nt-grid -->
+            </div><!-- loan-intro-inner -->
+        </div><!-- .full-wrapper loan-intro -->
+        
+        <div class="full-wrapper features">
+        	<div class="section-contain">
+            	<div class="features-inner">
+                    <div class="nt-grid">
+                    	<div class="main-head">
+                            <h1 class="main-tt">TOP <span>6</span> Reasons </h1>
+                            <h5>Why you should choose Buddy Loans</h5>
+                        </div><!-- main-head -->
+                        <div class="features-wrapper">
+                        	<div class="features-sect">
+                            	<div class="nt-row">
+                                	<div class="colm colm-span4">
+                                    	<div class="feature">
+                                        	<div class="feature-icon-holder">
+                                            	<span class="features-icon">
+                                                	<i class="fa fa-calendar"></i>
+                                                </span>
+                                                <h4>Same Day <br> Payouts</h4>
+                                            </div>
+                                            <p>At Buddy our goal is to pay out your money on the same day of the application.</p>
+                                        </div><!-- feature -->
+                                    </div>
+                                    <div class="colm colm-span4">
+                                    	<div class="feature">
+                                        	<div class="feature-icon-holder">
+                                            	<span class="features-icon">
+                                                	<i class="fa fa-thumbs-o-down"></i>
+                                                </span>
+                                                <h4>Bad Credit <br> No Problem</h4>
+                                            </div>
+                                            <p>We will still consider your application if you can afford it, even if you have CCJs or DEFAULTS.</p>
+                                        </div><!-- feature -->                                    
+                                    </div>
+                                    <div class="colm colm-span4">
+                                    	<div class="feature">
+                                        	<div class="feature-icon-holder">
+                                            	<span class="features-icon">
+                                                	<i class="fa fa-bar-chart"></i>
+                                                </span>
+                                                <h4>Rebuild Your <br> Credit History</h4>
+                                            </div>
+                                            <p>Keeping up with your repayments will improve your credit score.</p>
+                                        </div><!-- feature -->                                    
+                                    </div>
+                                </div><!-- end .row section -->   
+                            </div><!-- features-sect -->
+                        	<div class="features-sect">
+                            	<div class="nt-row">
+                                	<div class="colm colm-span4">
+                                    	<div class="feature">
+                                        	<div class="feature-icon-holder">
+                                            	<span class="features-icon">
+                                                	<i class="fa fa-clock-o"></i>
+                                                </span>
+                                                <h4>No Early  <br> Settlement Fees</h4>
+                                            </div>
+                                            <p>If you decide to pay back your loan before the term we DO NOT charge you any early settlement fees.</p>
+                                        </div><!-- feature -->
+                                    </div>
+                                    <div class="colm colm-span4">
+                                    	<div class="feature">
+                                        	<div class="feature-icon-holder">
+                                            	<span class="features-icon">
+                                                	<i class="fa fa-money"></i>
+                                                </span>
+                                                <h4>Any Purpose  <br> Loans</h4>
+                                            </div>
+                                            <p>Get your loan for a car, wedding, debt consolidation, home improvements, education fees, anything you want!</p>
+                                        </div><!-- feature -->                                    
+                                    </div>                                    
+                                    <div class="colm colm-span4">
+                                    	<div class="feature">
+                                        	<div class="feature-icon-holder">
+                                            	<span class="features-icon">
+                                                	<i class="fa fa-check"></i>
+                                                </span>
+                                                <h4>Affordable <br> Repayments</h4>
+                                            </div>
+                                            <p>Our repayments are competitive within the industry.</p>
+                                        </div><!-- feature -->                                    
+                                    </div>
+                                </div><!-- end .row section -->   
+                            </div><!-- features-sect -->                            
+                        </div><!-- features-wrapper --> 
+                        <div class="features-btn">
+                        	<a href="#" class="btn-f btn-arrow">Apply now for your loan</a>
+                        </div><!-- features-btn -->  
+                    </div><!-- nt-grid -->
+                </div><!-- features-inner -->	
+            </div><!-- section-contain -->
+        </div><!-- full-wrapper features -->
+        
+        <div class="full-wrapper videos">
+            <div class="main-head">
+                <div class="main-head-vid">
+                	<div class="main-head-vid-icon">
+                    	<i class="fa fa-film"></i>
+                    </div>
+                    <h2>What is a <b>Guarantor Loan?</b></h2> 
+                </div>
+            </div>        
+        	<div class="section-contain">
+            	<div class="videos-inner">
+                	<div class="nt-grid">
+                    	<div class="videos-wrapper">
+                        	<div class="nt-row">
+                            	<div class="colm colm-span6">
+                               		<div class="videos-inner-w">
+                                    	<p>A guarantor loan is an unsecured loan where the borrower nominates 
+                                        someone else to make payments if they are unable to. As this lowers the 
+                                        risk for default for lenders, it may increase your chances of approval 
+                                        if you have bad credit.</p>
+                                        <p>Buddy Loans are a guarantor loan company where you can borrow 
+                                        from £1,000 up to £10,000, and pay it back over a period you can 
+                                        afford between 12 and 60 months.</p>
+                                        <p><strong>If you've got a good BUDDY, you can get a loan!</strong></p>
+                                        <div class="getloan">
+                                        	<a href="#"  class="btn-f btn-arrow">Get your loan today!</a>
+                                        </div>
+                                    </div> 
+                                </div><!-- end .col5 section -->
+                                <div class="colm colm-span6">
+                                	<div class="video-section">
+                                        <div class="video">
+                                            <div class="youtube-player" data-id="W5SXGZtKsW8"></div>
+                                        </div>
+                                    </div><!-- video-section -->                               
+                                </div><!-- end .col7 section -->
+                            </div>
+                        </div><!-- videos-wrapper --> 
+                    </div><!-- nt-grid -->
+                </div><!-- videos-inner -->
+            </div><!-- section-contain -->
+        </div><!-- full-wrapper videos -->
+        
+        <div class="full-wrapper user-reviews">
+        	<div class="section-contain">
+            	<div class="reviews-inner">
+                	<div class="reviews-row">
+                    	<div class="nt-grid">
+                        	<div class="nt-row">
+                            	<div class="colm colm-span8">
+                                	<div class="nt-row">
+                                    	<div class="colm colm-span6">
+                                        	<h3> Client Reviews </h3>
+                                        </div>
+                                    	<div class="colm colm-span6">
+                                            <div class="stars">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>                                        
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="colm colm-span4"></div>
+                            </div>
+                        </div><!-- nt-grid -->
+                    </div>
+                	<div class="nt-grid">
+                    	<div class="nt-row">
+                        	<div class="colm colm-span8">
+                                <div class="testimonials-holder">
+                                    <div class="testimonials-inner">
+                                        <div id="testimonial-carousel" class="owl-carousel owl-theme">
+                                            <div class="item">
+                                                <h4> Peter Sutton </h4>
+                                                <p>Cras a elementum dolor. Praesent aliquam sapien ac eros semper 
+                                                ullamcorper. Sed imperdiet enim at sodales suscipit. Aenean eget faucibus ipsum.</p>
+                                            </div><!-- item -->
+                                            <div class="item">
+                                                <h4> Jane Austine </h4>
+                                                <p>Cras a elementum dolor. Praesent aliquam sapien ac eros semper 
+                                                ullamcorper. Sed imperdiet enim at sodales suscipit. Aenean eget faucibus ipsum.</p>
+                                            </div><!-- item -->
+                                            <div class="item">
+                                                <h4> Robert Kennedy </h4>
+                                                <p>Cras a elementum dolor. Praesent aliquam sapien ac eros semper 
+                                                ullamcorper. Sed imperdiet enim at sodales suscipit. Aenean eget faucibus ipsum.</p>
+                                            </div><!-- item -->
+                                            <div class="item">
+                                                <h4> Christine Fay </h4>
+                                                <p>Cras a elementum dolor. Praesent aliquam sapien ac eros semper 
+                                                ullamcorper. Sed imperdiet enim at sodales suscipit. Aenean eget faucibus ipsum.</p>
+                                            </div><!-- item -->            
+                                        </div><!-- testimonial-carousel -->                                    
+                                    </div><!-- testimonials-inner -->
+                                </div><!-- testimonials-holder -->                               
+                            </div><!-- col8 -->
+                            <div class="colm colm-span4">
+                                <div class="trust-box">
+                                    <h3>Excellent</h3>
+                                    <p class="number">9.4</p>
+                                    <p class="sub">From 0 to 10</p>
+                                </div><!-- trust-box -->                            
+                            </div>
+                        </div><!--nt-row-->
+                    </div><!-- nt-grid -->
+                </div><!-- reviews-inner -->
+            </div><!-- section-contain -->
+        </div><!-- full-wrapper user-reviews -->
+        
+        <div class="full-wrapper guaranter">
+        	<div class="section-contain">
+            	<div class="guaranter-inner">
+            		<div class="nt-grid">
+                    	<div class="main-head">
+                            <h2> <span>Who can be</span> a guarantor? </h2>
+                        </div><!-- main-head -->
+                        <div class="guaranter-section">
+                        	<div class="nt-row">
+                            	<div class="colm colm-span7">
+                                    <div class="guaranter-box">
+                                        <ul class="list-unstyled">
+                                            <li><i class="fa fa-users"></i> Family Member, Close Friend, Colleague</li>
+                                            <li><i class="fa fa-user-plus"></i>Aged between 18 - 80</li>
+                                            <li><i class="fa fa-bank"></i>UK Bank Account</li>
+                                            <li><i class="fa fa-line-chart"></i>OK Credit Score</li>
+                                            <li><i class="fa fa-credit-card-alt"></i>Minimum Income - £1,000</li>
+                                            <li><i class="fa fa-hotel"></i><span>Residential Status</span><br>Homeowner, Tenant, Living with Parents</li>
+                                        </ul>
+                                    </div>                                
+                                </div><!-- colm-span7 -->
+                                <div class="colm colm-span5">
+                               		<div class="guaranter-details">
+                                    	<h3>A <strong>Guarantor is a good friend, a family member or 
+                                        a work colleague</strong> who knows you can repay the loan, 
+                                        your Buddy guarantees the loan for you.</h3>
+                                        <hr>
+                                        <p class="smal">* Please note as a guarantor you will be 
+                                        responsible for ensuring that the loan is brought up to 
+                                        date in the event payments are missed by the borrower. 
+                                        In the event that payments are consistently missed this 
+                                        may impact on your credit score.</p>
+                                        <div class="gbtn">
+                                        	<a href="#" class="btn-f btn-arrow">Get your loan today!</a>
+                                        </div>
+                                    </div> 
+                                </div><!-- colm-span5 -->
+                            </div><!--nt-row-->
+                        </div><!-- guaranter-section -->                    
+                    </div><!-- nt-grid -->
+                </div><!-- guaranter-inner -->
+            </div><!-- section-contain -->
+        </div><!-- full-wrapper guaranter -->
+        
+        <div class="full-wrapper work">
+        	<div class="section-contain">
+            	<div class="work-inner">
+            		<div class="nt-grid">
+                    	<div class="main-head">
+                            <h2> <span>How Guarantor</span> Loans Work</h2>
+                        </div><!-- main-head -->
+                        <div class="work-section">
+                        	<div class="nt-row">
+                            	<div class="colm colm-span1-5">
+                               		<div class="work-details">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o"></i>
+                                            <span> 1 </span>                                        
+                                        </div><!-- icon-holder -->
+                                        <div class="process-detail">
+                                            <h3 class="h3-1">Apply <br><b>Online</b></h3>
+                                        </div><!-- process-detail -->
+                                    </div><!-- work-details --> 
+                                </div><!-- colm-span1-5 -->
+                            	<div class="colm colm-span1-5">
+                               		<div class="work-details">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-user"></i>
+                                            <span> 2 </span>                                        
+                                        </div><!-- icon-holder -->
+                                        <div class="process-detail">
+                                            <h3 class="h3-2"><b>Nominate</b> <br>your <b>Guarantor</b></h3>
+                                        </div><!-- process-detail -->
+                                    </div><!-- work-details --> 
+                                </div><!-- colm-span1-5 -->
+                            	<div class="colm colm-span1-5">
+                               		<div class="work-details">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-edit"></i>
+                                            <span> 3 </span>                                        
+                                        </div><!-- icon-holder -->
+                                        <div class="process-detail">
+                                            <h3 class="h3-3">Your <b>application</b> <br>will be <b>assessed</b></h3>
+                                        </div><!-- process-detail -->
+                                    </div><!-- work-details --> 
+                                </div><!-- colm-span1-5 -->
+                            	<div class="colm colm-span1-5">
+                               		<div class="work-details">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-clock-o"></i>
+                                            <span> 4 </span>                                        
+                                        </div><!-- icon-holder -->
+                                        <div class="process-detail">
+                                            <h3 class="h3-4"><b>Decisions</b> within <br>the <b>hour<sup>*</sup></b></h3>
+                                        </div><!-- process-detail -->
+                                    </div><!-- work-details --> 
+                                </div><!-- colm-span1-5 -->
+                            	<div class="colm colm-span1-5">
+                               		<div class="work-details">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-calendar-check-o"></i>
+                                            <span> 5 </span>                                        
+                                        </div><!-- icon-holder -->
+                                        <div class="process-detail">
+                                            <h3 class="h3-5"><b>Same day payout</b> <br>if approved</h3>
+                                        </div><!-- process-detail -->
+                                    </div><!-- work-details --> 
+                                </div><!-- colm-span1-5 -->                                                                                                                                
+                            </div><!--nt-row-->
+                        </div><!-- work-section -->                    
+                    </div><!-- nt-grid -->
+                </div><!-- work-inner -->
+            </div><!-- section-contain -->
+        </div><!-- full-wrapper work --> 
+        
+        <div class="full-wrapper why">
+        	<div class="section-contain">
+            	<div class="why-inner">
+            		<div class="nt-grid">
+                    	<div class="main-head">
+                            <h2> <span>Why</span> choose us? </h2>
+                        </div><!-- main-head -->
+                        <div class="why-section">
+                        	<div class="nt-row">
+                            	<div class="colm colm-span6">
+                                	<div class="why-details">
+                                    	<h3>Because Buddy Loans is a <b>QUICK</b> and <b>EASY</b> 
+                                        way to borrow <b>up to £10,000</b> with a <b>Guarantor</b> and...</h3>
+                                        <img src="images/choose_img.png" alt="Happy People">
+                                    </div>      
+                                </div><!-- colm-span6 -->
+                                <div class="colm colm-span6">
+                                    <div class="icon-list">                                
+                                        <ul>
+                                            <li><strong>NO PAPERWORK</strong><br>
+                                            to complete we're 100% online</li>
+                                            <li><strong>NO OUTRAGEOUS</strong><br>
+                                            interest rates</li>
+                                            <li><strong>REPAYMENTS</strong><br>
+                                            that are spread out over time, up to 60 months</li>
+                                            <li><strong>QUICK APPROVAL</strong>
+                                            and the money in your bank account fast. We aim for same day pay-outs</li>
+                                        </ul>
+                                    </div>                                
+                                </div><!-- colm-span6 -->
+                            </div><!--nt-row-->
+                        </div><!-- why-section -->
+                        <div class="features-btn">
+                        	<a href="#" class="btn-f btn-arrow">Apply now for your loan</a>
+                        </div><!-- features-btn -->                                             
+                    </div><!-- nt-grid -->
+                </div><!-- why-inner -->
+            </div><!-- section-contain -->
+        </div><!-- full-wrapper why -->
+        
+        <div class="full-wrapper represent">
+        	<div class="section-contain">
+                <div class="main-head">
+                    <h3>Representative <b>Example</b></h3>
+                </div><!-- main-head -->            	
+            	<div class="represent-inner">
+            		<div class="nt-grid">
+                        <div class="represent-section">
+                        	<div class="nt-row">
+                            	<div class="colm colm-span1-5">
+                                	<div class="rep">
+                                    	<h4><span> Borrow </span><br>£3,250</h4>
+                                    </div>    
+                                </div><!-- colm-span1-5 -->
+                                <div class="colm colm-span1-5">
+                                	<div class="rep">
+                                    	<h4><span> Term </span><br>36 months</h4>
+                                    </div>                                                              
+                                </div><!-- colm-span1-5 -->
+                            	<div class="colm colm-span1-5">
+                                	<div class="rep">
+                                    	<h4><span> Repaying </span><br>£158.57 <em>p/m</em></h4>
+                                    </div>    
+                                </div><!-- colm-span1-5 -->
+                                <div class="colm colm-span1-5">
+                                	<div class="rep">
+                                    	<h4><span>Total Repayable </span><br>£5,714.67</h4>
+                                    </div>                                                              
+                                </div><!-- colm-span1-5 -->
+                                <div class="colm colm-span1-5">
+                                	<div class="rep">
+                                    	<h4><span>Interest Rate </span><br>41.16% <em>(fixed)</em></h4>
+                                    </div>                                                              
+                                </div><!-- colm-span1-5 -->                                                                 
+                            </div><!--nt-row-->
+                        </div><!-- represent-section -->
+                        <hr>
+                        <div class="rep-apr">
+                        	<div class="rep-apr-inner">
+                                <div class="col-center">
+                                    <p class="rep-apr-f">Representative 49.9% APR.</p>
+                                    <p class="small">Terms and Conditions apply. Suitable Guarantor required. 
+                                    All loans are subject to status and affordability checks prior to approval. 
+                                    All applicants must be 18 or over.</p>
+                                </div>                            
+                            </div>
+                        </div><!-- rep-apr -->                                       
+                    </div><!-- nt-grid -->
+                </div><!-- represent-inner -->
+            </div><!-- section-contain -->
+        </div><!-- full-wrapper represent -->
+        
+        <div class="full-wrapper faq">
+        	<div class="section-contain">
+            	<div class="faq-inner">
+            		<div class="nt-grid">
+                    	<div class="main-head">
+                            <h2> <span>Frequently Asked</span>  Questions </h2>
+                        </div><!-- main-head -->
+                        <div class="faq-section">
+                        
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>What is a Guarantor Loan?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                            <p>A guarantor loan is an unsecured personal loan 
+                                            between £1000 and £10,000 taken over a period of 12-60 months. 
+                                            The only difference is that, due to the borrower's credit risk 
+                                            we ask for another person to guarantee that the loan will be repaid.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question -->
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>What is a Guarantor Loan for?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                            <ul class="list-unstyled">
+                                                <li>- Someone who may not have any credit and is looking to build a credit history</li>
+                                                <li>- Anyone who may be in need of money quickly, without loads of paperwork</li>
+                                                <li>- Someone who may have had bad credit in the past</li>
+                                            </ul>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question -->
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>Does a Guarantor loan require a credit score check?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                        	<p>We will consider your credit history and the credit history 
+                                            of your guarantor, however your application approval will be 
+                                            primarily based on your ability to repay your loan.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question --> 
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>How long does it take to complete my application?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                        	<p>The application process is easy and straightforward. 
+                                            In most instances applications are approved within 24 hours, 
+                                            although it can be as quick the same day.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question -->
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>Can I settle my loan early?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                        	<p>Yes! If you wish to pay your loan off early you 
+                                            can do so with no early penalties.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question --> 
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>What happens if I cannot afford to repay my Loan?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                        	<p>If you are, or believe you may start, encountering any issues with being 
+                                            able to meet your repayments we would urge you to contact us as soon as 
+                                            possible. If you miss a payment, we will then contact the guarantor 
+                                            and request payment from them.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question -->
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>Do you charge me for taking out a Buddy Loan?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                        	<p>We don't apply any fees or charges for your application or taking out 
+                                            a Buddy Loan. Your interest will accrue on a daily basis in line with that 
+                                            outlined in your credit agreement and each payment you make will be made 
+                                            up of paying your interest and a part towards the capital.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question -->
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>I need to sort my loan quickly, where can I go?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                        	<p>Yes, Guarantor Loans are an unsecured loan and do not require 
+                                            any collateral or property to be secured against. You just need a 
+                                            good buddy who agrees to support your loan.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question -->
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>I just need a small loan, say £1,000 to £1,500</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                        	<p>At Buddy Loans you can borrow as little as £1000 up to £10,000. 
+                                            This doesn't mean you have to borrow £10,000, you can borrow as 
+                                            little as £1,000, if that is all you require.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question -->
+                            
+                        	<div class="faq-question">
+                                <div class="nt-row">
+                                    <div class="colm colm-span4">
+                                    	<h4>How do I pay back my Guarantor Loan?</h4>
+                                    </div><!-- colm-span3 -->
+                                    <div class="colm colm-span8">
+                                        <div class="faq-sep">
+                                        	<p>Payments are on a monthly basis. Your payments will be determined by the amount 
+                                            you wish to borrow, and the term of the loan. The term is how long you are borrowing 
+                                            the money for. The longer the term of your loan such as 48 months of payments instead 
+                                            of 36 months of payments will reduce your monthly payment. However, you will pay more 
+                                            in interest over the longer time period.</p>
+                                        </div>                                           
+                                    </div><!-- colm-span3 -->
+                                </div><!--nt-row-->
+                            </div><!-- faq-question -->                                                         
+                            
+                        </div><!-- faq-section -->                                           
+                    </div><!-- nt-grid -->
+                </div><!-- faq-inner -->
+            </div><!-- section-contain -->
+        </div><!-- full-wrapper faq -->                               
+
+              
+		<div class="full-wrapper footr">        
+            <div class="bottom-footer">
+                <div class="nt-grid">
+                    <div class="nt-row">
+                    
+                        <div class="colm colm-span3">
+                            <div class="foob">
+                                <h5 class="foo-headings">Contact us</h5>
+                                <ul>
+                                	<li><i class="fa fa-clock-o"></i>Nakawa Kampala </li>
+                                    <li><i class="fa fa-map-o"></i> P.o.box 737 Kampala, Uganda </li>
+                                    <li><i class="fa fa-envelope"></i> info@goldminefinance.com </li>
+                                    <li><i class="fa fa-phone-square"></i> +256 (0)393518282 </li>
+                                </ul>
+                                <h5 class="foo-headings">Enquiries</h5>
+                                <ul>
+                                    <li><i class="fa fa-phone-square"></i> +256 (0)393518282 </li>
+                                    <li><i class="fa fa-phone-square"></i> +256 (0)393518282 </li>
+                                </ul>                                                                
+                            </div><!-- end .foo section -->
+                        </div><!-- end .col3 section -->
+                        
+                        <div class="colm colm-span3">
+                            <div class="foob">
+                            	<h5 class="foo-headings">ABOUT</h5>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Home</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Apply Now</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Our Loans</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Resources</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> What is a Buddy Loan?</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Who can be my Buddy?</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> About Us</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Contact Us</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> FAQs</a></li>
+                                </ul>                                    
+                            </div><!-- foo -->
+                        </div><!-- end .col3 section -->
+
+                        <div class="colm colm-span3">
+                            <div class="foob">
+                            	<h5 class="foo-headings">SUPPORT</h5>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Privacy Notice</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Cookie Policy</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Terms of Use</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Complaints Procedure</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Debt Consolidation Loans</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Bad Credit Loans</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Credit Report</a></li>
+                                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Car Loans</a></li>
+                                </ul>                                
+                            </div><!-- foo -->
+                        </div><!-- end .col3 section -->
+                        
+                        <div class="colm colm-span3">
+                            <div class="foob last">
+                            	<h5 class="foo-headings">OFFICE HOURS</h5>
+                                <div class="office-cont">
+                                    <p>MONDAY to THURSDAY<br>9.00am to 7.00pm</p>
+                                    <p>FRIDAYS<br>9.00am to 4.30pm</p>
+                                    <p>SATURDAYS<br>10.00am to 2.00pm</p>
+                                    <p>BANK HOLIDAYS<br>Closed</p>
+                                </div>                                   
+                            </div><!-- foo -->
+                        </div><!-- end .col3 section -->                        
+                         
+                    </div><!-- end .row section -->              
+                </div><!-- .nt-grid -->                                   
+            </div><!-- .bottom-footer -->
+            
+            <div class="copy-footer">
+                <div class="nt-grid">
+                	<div class="copyright-box">
+                        <div class="nt-row">
+                            <div class="colm colm-span6">
+                                <p class="copyright">&#169; <span class="currentYear">2018</span> Buddy Loans</p>
+                            </div><!-- end .col6 section -->
+                            <div class="colm colm-span6">
+                                <div class="social-icons social-icons-pad">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div><!-- social-icons --> 
+                            </div><!-- end .col6 section -->
+                        </div><!-- end .row section -->
+                    </div>
+                </div><!-- end .grid section -->
+            </div><!-- // -->                        
+		</div><!-- footer -->       
+        <!-- Load Javascript  -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugin.js"></script>       
+        <script type="text/javascript" src="js/main.js"></script>                         
+    </body>
+</html>
