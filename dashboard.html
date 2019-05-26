@@ -10,10 +10,11 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/loader.css">
         <title>Buddy Loans | Dashboard</title>
     </head>
     <body>
-    
+        <div class="loader"><img src="images/spinner.gif" alt="loading..." /></div>
     	<div class="full-wrapper site-header">
             <div class="section-wrapper top-bar">
                 <div class="nt-grid">
@@ -22,16 +23,14 @@
                             <div class="colm colm-span6">
 								<div class="tb-social">
                                 	<ul>
-                                    	<li><a href="#"> Home </a></li>
-                                        <li><a href="#"> Blog </a></li>
-                                        <li><a href="#"> News </a></li>
+                                    	<li><a id="user-name" href="#"></a></li>
                                     </ul>
                                 </div>
                             </div><!-- end .col6 first section -->
                             <div class="colm colm-span6">                                
                                 <div class="sub-menu clear">
                                     <ul>
-                                        <li><a id="user-name" href="#"></a></li>
+                                        <li><a id="user-balance" href="#"></a></li>
                                         <li><a onclick="logout()" href="#"><span> <i class="fa fa-lock"></i>Logout</span></a></li>
                                     </ul>                                 
                                 </div><!-- end .tb-buttons section -->                               
@@ -91,7 +90,12 @@
             	<div class="nt-grid">
                 	<div id="widget" class="loan-calc">
                     	<div class="nt-row">
-                            <h2>Transaction Summmary</h2>
+                            <div class="colm colm-span10"><h2>Transaction Summmary</h2></div>
+                            <div class="colm colm-span0"></div>
+                            <div class="colm colm-span2"><p>200000</p></div>
+                            
+                        </div>
+                        <div class="nt-row">
                         	<div class="colm colm-span5">
 
                             </div><!-- end .col7 section -->

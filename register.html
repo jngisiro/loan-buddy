@@ -10,10 +10,11 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/loader.css">
         <title>Buddy Loans | Register</title>
     </head>
     <body>
-    
+        <div class="loader"><img src="images/spinner.gif" alt="loading..." /> <br><p>Logging in</p></div>
     	<div class="full-wrapper site-header">
             <div class="section-wrapper top-bar">
                 <div class="nt-grid">
@@ -91,54 +92,76 @@
             	<div class="nt-grid">
                 	<div id="widget" class="loan-calc">
                     	<div class="nt-row">
-                        	<div class="colm colm-span5">
-                            <h2>LOGIN</h2>
+                        	<div class="colm colm-span12">
+                            <h2>SIGN UP HERE</h2>
                             <form class="cs-form">
+                                <div class="nt-row">
+                                    <div class="colm colm-span5">
+                                            <div class="fm-control">
+                                                    <div class="nt-row">
+                                                        <input id="firstname" class="input" type="text" placeholder="FIRST NAME" />
+                                                     </div><!-- nt-row -->
+                                                    
+                                                </div><!-- slider-sect -->
+                                                <br><br>
                             	<div class="fm-control">
                                 	<div class="nt-row">
-                                    	<input id="user-email" class="input" type="text" placeholder="EMAIL" />
+                                    	<input id="lastname" class="input" type="text" placeholder="LAST NAME" />
                                      </div><!-- nt-row -->
                                     
                                 </div><!-- slider-sect -->
                                 <br><br>                                                 
                             	<div class="fm-control">
                                 	<div class="nt-row">
-                                    	<input id="user-password" class="input" type="password" placeholder="PASSWORD" />
+                                    	<input id="user-email" class="input" type="email" placeholder="EMAIL ADDRESS" />
                                     </div><!-- nt-row -->
                                     
                                 </div><!-- slider-sect --> 
                                 <br>
+
+                                
+                            </div>
+
+                            <div class="colm colm-span2"></div>
+
+                            <div class="colm colm-span5">
+                                    <div class="fm-control">
+                                            <div class="nt-row">
+                                                <input id="username" class="input" type="text" placeholder="USERNAME" />
+                                             </div><!-- nt-row -->
+                                            
+                                    </div><!-- slider-sect -->
+                                    <br><br>
+                                    <div class="fm-control">
+                                            <div class="nt-row">
+                                                <input id="user-password" class="input" type="password" placeholder="PASSWORD" />
+                                             </div><!-- nt-row -->
+                                            
+                                    </div><!-- slider-sect -->
+                                    <br><br>  
+                                    <div class="fm-control">
+                                            <div class="nt-row">
+                                                <input id="confirm-password" class="input" type="password" placeholder="CONFIRM PASSWORD" />
+                                             </div><!-- nt-row -->
+                                            
+                                    </div><!-- slider-sect -->
+                            </div>
+                            </div><!--END nt Row-->
                             	                                
                                 <div class="loan-calc-footer f-desktop">
                                     <div class="loan-calc-footer-inner">
                                         <div class="loan-calc-footer-wrap">
                                             <div class="nt-row">
-                                                <div class="colm colm-span7">
-                                                    <a onclick="loginUser()" id="signin" class="btn-f btn-arrow" href="#">SIGN IN</a><br>
+                                                <div class="colm colm-span5">
+                                                    <a onclick="registerUser()" class="btn-f btn-arrow" href="#">REGISTER</a><br>
                                                 </div>
                                                                                                 
                                             </div>
                                         </div><!-- loan-calc-footer-wrap -->
                                     </div><!-- loan-calc-footer-inner -->
-                                </div><!-- loan-calc-footer -->                                
+                                </div> 
                                 
-                            </div><!-- end .col7 section -->
-                            <div class="colm colm-span2"></div>
-                            <div class="colm colm-span5">
-                                <div class="fm-control">
-                                	<div class="nt-row">
-                                    	<input id="user-email" class="input" type="text" placeholder="EMAIL" />
-                                     </div><!-- nt-row -->
-                                    
-                                </div><!-- slider-sect -->
-                                <br><br>                                                 
-                            	<div class="fm-control">
-                                	<div class="nt-row">
-                                    	<input id="user-password" class="input" type="password" placeholder="PASSWORD" />
-                                    </div><!-- nt-row -->
-                                    
-                                </div><!-- slider-sect -->
-                            </div><!-- end .col5 section -->
+                            </form>
                         </div><!-- end .nt-row section -->
                         
                         <div class="loan-calc-footer f-mobile">
@@ -266,7 +289,8 @@
         <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#config-web-app --> 
             <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
         <script src="js/config.js"></script>
-        <script src="js/login.js"></script>           
+        <script src="js/register.js"></script>           
     </body>
 </html>
