@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server" : "live-server"
+    "server": "live-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^6.0.2",
     "live-server": "^1.2.1"
   }
 }

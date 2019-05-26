@@ -96,14 +96,14 @@
                             <form class="cs-form">
                             	<div class="fm-control">
                                 	<div class="nt-row">
-                                    	<input class="input" type="text" placeholder="EMAIL" />
+                                    	<input id="user-email" class="input" type="text" placeholder="EMAIL" />
                                      </div><!-- nt-row -->
                                     
                                 </div><!-- slider-sect -->
                                 <br><br>                                                 
                             	<div class="fm-control">
                                 	<div class="nt-row">
-                                    	<input class="input" type="password" placeholder="PASSWORD" />
+                                    	<input id="user-password" class="input" type="password" placeholder="PASSWORD" />
                                     </div><!-- nt-row -->
                                     
                                 </div><!-- slider-sect --> 
@@ -114,7 +114,7 @@
                                         <div class="loan-calc-footer-wrap">
                                             <div class="nt-row">
                                                 <div class="colm colm-span7">
-                                                    <a class="btn-f btn-arrow" href="#">SIGN IN</a><br>
+                                                    <a onclick="loginUser()" id="signin" class="btn-f btn-arrow" href="#">SIGN IN</a><br>
                                                 </div>
                                                                                                 
                                             </div>
@@ -132,14 +132,14 @@
                                     <form class="cs-form">
                                             <div class="fm-control">
                                                 <div class="nt-row">
-                                                    <input class="input" type="text" placeholder="EMAIL" />
+                                                    <input id="email" class="input" type="text" placeholder="EMAIL" />
                                                  </div><!-- nt-row -->
                                                 
                                             </div><!-- slider-sect -->
                                             <br><br>                                                 
                                             <div class="fm-control">
                                                 <div class="nt-row">
-                                                    <input class="input" type="password" placeholder="PASSWORD" />
+                                                    <input id="password" class="input" type="password" placeholder="PASSWORD" />
                                                 </div><!-- nt-row -->
                                                 
                                             </div><!-- slider-sect --> 
@@ -150,7 +150,7 @@
                                                     <div class="loan-calc-footer-wrap">
                                                         <div class="nt-row">
                                                             <div class="colm colm-span7">
-                                                                    <a class="btn-f btn-arrow signup" href="#">SIGN UP</a>
+                                                                    <a id="signup" class="btn-f btn-arrow signup" href="#">SIGN UP</a>
                                                             </div>
                                                                                                          
                                                         </div>
@@ -279,6 +279,14 @@
         <!-- Load Javascript  -->
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugin.js"></script>       
-        <script type="text/javascript" src="js/main.js"></script>                         
+        <script type="text/javascript" src="js/main.js"></script>       
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#config-web-app --> 
+            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/login.js"></script>           
     </body>
 </html>
