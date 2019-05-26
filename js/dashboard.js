@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   });
 
   const name = document.getElementById("user-name")
-  const firebaseRef = firebase.database().ref("users").child("id");
+  const firebaseRef = firebase.database().ref("users/1");
   const username = firebaseRef.child("name");
   
   const transactions = firebase.database().ref("users/1/transactions")

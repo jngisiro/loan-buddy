@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/animate.min.css">
-        <title>Buddy Loans | Dashboard</title>
+        <title>Buddy Loans | Register</title>
     </head>
     <body>
     
@@ -31,8 +31,8 @@
                             <div class="colm colm-span6">                                
                                 <div class="sub-menu clear">
                                     <ul>
-                                        <li><a id="user-name" href="#"></a></li>
-                                        <li><a onclick="logout()" href="#"><span> <i class="fa fa-lock"></i>Logout</span></a></li>
+                                        <li><a href="#"> Apply Online </a></li>
+                                        <li><a href="login.html"><span> <i class="fa fa-lock"></i> Login</span></a></li>
                                     </ul>                                 
                                 </div><!-- end .tb-buttons section -->                               
                             </div><!-- end .col6 last section -->
@@ -91,15 +91,53 @@
             	<div class="nt-grid">
                 	<div id="widget" class="loan-calc">
                     	<div class="nt-row">
-                            <h2>Transaction Summmary</h2>
                         	<div class="colm colm-span5">
-
-                            </div><!-- end .col7 section -->
-
-                            <div class="colm colm-span2"></div>
-
-                            <div class="colm colm-span5">
+                            <h2>LOGIN</h2>
+                            <form class="cs-form">
+                            	<div class="fm-control">
+                                	<div class="nt-row">
+                                    	<input id="user-email" class="input" type="text" placeholder="EMAIL" />
+                                     </div><!-- nt-row -->
                                     
+                                </div><!-- slider-sect -->
+                                <br><br>                                                 
+                            	<div class="fm-control">
+                                	<div class="nt-row">
+                                    	<input id="user-password" class="input" type="password" placeholder="PASSWORD" />
+                                    </div><!-- nt-row -->
+                                    
+                                </div><!-- slider-sect --> 
+                                <br>
+                            	                                
+                                <div class="loan-calc-footer f-desktop">
+                                    <div class="loan-calc-footer-inner">
+                                        <div class="loan-calc-footer-wrap">
+                                            <div class="nt-row">
+                                                <div class="colm colm-span7">
+                                                    <a onclick="loginUser()" id="signin" class="btn-f btn-arrow" href="#">SIGN IN</a><br>
+                                                </div>
+                                                                                                
+                                            </div>
+                                        </div><!-- loan-calc-footer-wrap -->
+                                    </div><!-- loan-calc-footer-inner -->
+                                </div><!-- loan-calc-footer -->                                
+                                
+                            </div><!-- end .col7 section -->
+                            <div class="colm colm-span2"></div>
+                            <div class="colm colm-span5">
+                                <div class="fm-control">
+                                	<div class="nt-row">
+                                    	<input id="user-email" class="input" type="text" placeholder="EMAIL" />
+                                     </div><!-- nt-row -->
+                                    
+                                </div><!-- slider-sect -->
+                                <br><br>                                                 
+                            	<div class="fm-control">
+                                	<div class="nt-row">
+                                    	<input id="user-password" class="input" type="password" placeholder="PASSWORD" />
+                                    </div><!-- nt-row -->
+                                    
+                                </div><!-- slider-sect -->
                             </div><!-- end .col5 section -->
                         </div><!-- end .nt-row section -->
                         
@@ -221,15 +259,14 @@
         <!-- Load Javascript  -->
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugin.js"></script>       
-        
+        <script type="text/javascript" src="js/main.js"></script>       
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
 
         <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#config-web-app --> 
             <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
         <script src="js/config.js"></script>
-        <script src="js/dashboard.js"></script>                         
+        <script src="js/login.js"></script>           
     </body>
 </html>
