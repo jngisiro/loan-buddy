@@ -6,19 +6,21 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
   });
 
+  const loader = document.querySelector(".loader");
   const currentUser = localStorage.getItem("currentUser");
-  const name = document.getElementById("user-name")
-  const firebaseRef = firebase.database().ref("users/"+currentUser);
-  const username = firebaseRef.child("firstname");
- 
-  // const transactions = firebase.database().ref("users/1/transactions")
-  console.log("buddyUser", currentUser)
+  const name = document.getElementById("name");
+  const balance = document.getElementById("balance");
+  const user = firebase.database().ref("users/"+currentUser);
+  
+  user.on("value", function(snapshot){
+    name.innerText = "Hi, " + snapshot.child("firstname").val() + " " + snapshot.child("lastname").val();
+    balance.innerText = "Balance: shs." + snapshot.child("accBalance").val();
+    console.log(snapshot.child("accBalance").val());
 
-  username.on("value", function(snapshot){
-    name.innerText = "Hi, " + snapshot.val();
-    const loader = document.querySelector(".loader");
     loader.className += " hidden";
   })
+ 
+  console.log("buddyUser", currentUser)
 
 function logout(){
     firebase.auth().signOut()

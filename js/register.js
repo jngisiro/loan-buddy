@@ -31,6 +31,7 @@ function registerUser(){
                     .then(function(){
                         loader.className += " hidden"
                         console.log("User successfully added to the database");
+                        localStorage.setItem("currentUser", username)
                     })
                     .catch(function(error){
                         loader.className += " hidden"
