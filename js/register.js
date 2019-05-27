@@ -3,6 +3,8 @@ window.addEventListener("load", function(){
     loader.className += " hidden";
 })
 
+const notice = document.querySelector(".notice");
+
 function registerUser(){
     const loader = document.querySelector(".loader");
     const firstname = document.getElementById("firstname").value;
@@ -14,7 +16,8 @@ function registerUser(){
     
     if(firstname != "" && lastname != "" && username != "" && email != "" && password != "" && confirmPassword != ""){
         if(password != confirmPassword){
-            alert("Passwords do not match");
+            notice.innerText = "Passowrds do not match";
+            notice.style.visibility = "visible";
         }
         else{
             loader.classList.remove("hidden");
@@ -30,14 +33,19 @@ function registerUser(){
                     })
                     .then(function(){
                         loader.className += " hidden"
-                        console.log("User successfully added to the database");
                         localStorage.setItem("currentUser", username)
+
                     })
                     .catch(function(error){
                         loader.className += " hidden"
-                        console.log(error.message);
+                        notice.innerText = "User already exists";
+                        notice.style.visibility = "visible";
                     });
-    
+                    
+                    // firebase.auth().signOut()
+                    //     .then(console.log("logged out"));
+                    // window.location.replace("dashboard.html");
+
                 })
                 .catch(function(error) {
                     // Handle Errors here.
@@ -45,11 +53,14 @@ function registerUser(){
                     var errorMessage = error.message;
                     // ...
                     loader.className += " hidden"
-                    console.log(errorMessage)
+                    notice.innerText = errorMessage;
+                    notice.style.visibility = "visible";
                 });
+            
         }
     }
     else{
-        alert("Please fill in all the values");
+        notice.innerText = "Please fill in all the values";
+        notice.style.visibility = "visible";
     }
 }

@@ -38,3 +38,9 @@
         visibility: visible;
     }
 }
+
+.notice{
+    color:red;
+    font-size: 15px;
+    visibility: hidden;
+}

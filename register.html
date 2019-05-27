@@ -94,7 +94,7 @@
                     	<div class="nt-row">
                         	<div class="colm colm-span12">
                             <h2>SIGN UP HERE</h2>
-                            <form class="cs-form">
+                            <form id="regForm" class="cs-form">
                                 <div class="nt-row">
                                     <div class="colm colm-span5">
                                             <div class="fm-control">
@@ -145,7 +145,7 @@
                                              </div><!-- nt-row -->
                                             
                                     </div><!-- slider-sect -->
-                            </div>
+                            </div> 
                             </div><!--END nt Row-->
                             	                                
                                 <div class="loan-calc-footer f-desktop">
@@ -155,7 +155,10 @@
                                                 <div class="colm colm-span5">
                                                     <a onclick="registerUser()" class="btn-f btn-arrow" href="#">REGISTER</a><br>
                                                 </div>
-                                                                                                
+                                                <div class="colm colm-span2"></div>
+                                                <div class="colm colm-span5">
+                                                    <div class="notice hidden">invalid username or password</div>
+                                                </div>                                           
                                             </div>
                                         </div><!-- loan-calc-footer-wrap -->
                                     </div><!-- loan-calc-footer-inner -->
@@ -164,24 +167,7 @@
                             </form>
                         </div><!-- end .nt-row section -->
                         
-                        <div class="loan-calc-footer f-mobile">
-                        	<div class="loan-calc-footer-inner">
-                            	<div class="loan-calc-footer-wrap">
-                                    <div class="nt-row">
-                                        <div class="colm colm-span7">
-                                            <a class="btn-f btn-arrow" href="#">Get My Loan</a>
-                                        </div>
-                                        <div class="colm colm-span5">
-                                            <ul class="fa-ul check">
-                                                <li><i class="fa fa-li fa-check"></i>We're a <b>Direct Lender</b></li>
-                                                <li><i class="fa fa-li fa-check"></i><b>No</b> up front <b>Broker Fees</b></li>
-                                                <li><i class="fa fa-li fa-lock"></i> <b>Secure</b> Connection</li>
-                                            </ul>                                                
-                                        </div>                                                
-                                    </div>
-                                </div><!-- loan-calc-footer-wrap -->
-                            </div><!-- loan-calc-footer-inner -->
-                        </div><!-- loan-calc-footer -->
+                        
                     </div><!-- loan-calc -->
                     
                 </div><!-- nt-grid -->

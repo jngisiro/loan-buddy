@@ -32,7 +32,7 @@
                             <div class="colm colm-span6">                                
                                 <div class="sub-menu clear">
                                     <ul>
-                                        <li><a href="#"> Apply Online </a></li>
+                                        <li><a href="loan-application.html"> Apply Online </a></li>
                                         <li><a href="login.html"><span> <i class="fa fa-lock"></i> Login</span></a></li>
                                     </ul>                                 
                                 </div><!-- end .tb-buttons section -->                               
@@ -97,7 +97,7 @@
                             <form class="cs-form">
                             	<div class="fm-control">
                                 	<div class="nt-row">
-                                    	<input id="username" class="input" type="text" placeholder="USERNAME" />
+                                    	<input id="username" class="input" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="USERNAME" />
                                      </div><!-- nt-row -->
                                     
                                 </div><!-- slider-sect -->
@@ -155,6 +155,7 @@
                                 </div><!-- loan-calc-footer-wrap -->
                             </div><!-- loan-calc-footer-inner -->
                         </div><!-- loan-calc-footer -->
+                        <div class="notice hidden">invalid username or password</div>
                     </div><!-- loan-calc -->
                     
                 </div><!-- nt-grid -->
