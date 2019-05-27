@@ -10,10 +10,11 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/loader.css">
         <title>Loan Buddy</title>
     </head>
     <body>
-    
+        <div class="loader"><img src="images/spinner.gif" alt="loading..." /> <br><p>Logging in</p></div>
     	<div class="full-wrapper site-header">
             <div class="section-wrapper top-bar">
                 <div class="nt-grid">
@@ -22,17 +23,15 @@
                             <div class="colm colm-span6">
 								<div class="tb-social">
                                 	<ul>
-                                    	<li><a href="#"> Home </a></li>
-                                        <li><a href="#"> Blog </a></li>
-                                        <li><a href="#"> News </a></li>
+                                        <li><a id="name" href="#"></a></li>
                                     </ul>
                                 </div>
                             </div><!-- end .col6 first section -->
                             <div class="colm colm-span6">                                
                                 <div class="sub-menu clear">
                                     <ul>
-                                        <li><a href="#"> Apply Online </a></li>
-                                        <li><a href="#"><span> <i class="fa fa-lock"></i> Login</span></a></li>
+                                            <li><a id="balance" href="#"></a></li>
+                                            <li><a onclick="logout()" href="#"><span> <i class="fa fa-lock"></i>Logout</span></a></li>
                                     </ul>                                 
                                 </div><!-- end .tb-buttons section -->                               
                             </div><!-- end .col6 last section -->
@@ -47,13 +46,13 @@
                         <div class="nt-row">
                             <div class="colm colm-span3">
                                 <div id="logo">
-                                    <a href="#"> Buddy <span> Loans </span> </a>
+                                    <a href="index.html"> Buddy <span> Loans </span> </a>
                                 </div><!-- End #logo Section -->                        
                             </div><!-- end .col3 section -->
                             <div class="colm colm-span9">
                                <div class="nav clear">
                                     <ul class="dropdown clear">
-                                        <li><a href="#">Apply Now</a></li>
+                                        <li><a href="loan-application.html">Apply Now</a></li>
                                         <li class="sub">
                                         	<a href="#">Our Loans <i class="fa fa-angle-down"></i></a>
                                             <ul>
@@ -97,7 +96,7 @@
                             </div><!-- end .col6 section -->
                         	<div class="colm colm-span6">
                                 <div class="sub-title">
-                                    <p>You can borrow up to <b>£10,000</b> with <b>no fees</b>. 
+                                    <p>You can borrow up to <b>shs.100,000,000</b> with <b>no fees</b>. 
                                     All you need is a <strong>Guarantor</strong>.</p>
                                 </div>                            
                             </div><!-- end .col6 section -->                            
@@ -114,47 +113,47 @@
                                             <div class="nt-row">
                                                 <div class="fm-section colm colm-span6">
                                                     <div class="fm-control">
-                                                    	<label class="label-control">Loan <b>Term</b> <em>*</em> </label>
+                                                    	<label class="label-control">Loan <b>Amount</b> <em>*</em> </label>
                                                         <div class="select">
-                                                            <select name="amount" id="amount">
+                                                            <select name="amount" id="amount" required>
                                                                 <option value="" selected="selected" disabled="disabled">Please select</option>
-                                                                <option value="1000">£1,000</option>
-                                                                <option value="1250">£1,250</option>
-                                                                <option value="1500">£1,500</option>
-                                                                <option value="1750">£1,750</option>
-                                                                <option value="2000">£2,000</option>
-                                                                <option value="2250">£2,250</option>
-                                                                <option value="2500">£2,500</option>
-                                                                <option value="2750">£2,750</option>
-                                                                <option value="3000">£3,000</option>
-                                                                <option value="3250">£3,250</option>
-                                                                <option value="3500">£3,500</option>
-                                                                <option value="3750">£3,750</option>
-                                                                <option value="4000">£4,000</option>
-                                                                <option value="4250">£4,250</option>
-                                                                <option value="4500">£4,500</option>
-                                                                <option value="4750">£4,750</option>
-                                                                <option value="5000">£5,000</option>
-                                                                <option value="5250">£5,250</option>
-                                                                <option value="5500">£5,500</option>
-                                                                <option value="5750">£5,750</option>
-                                                                <option value="6000">£6,000</option>
-                                                                <option value="6250">£6,250</option>
-                                                                <option value="6500">£6,500</option>
-                                                                <option value="6750">£6,750</option>
-                                                                <option value="7000">£7,000</option>
-                                                                <option value="7250">£7,250</option>
-                                                                <option value="7500">£7,500</option>
-                                                                <option value="7750">£7,750</option>
-                                                                <option value="8000">£8,000</option>
-                                                                <option value="8250">£8,250</option>
-                                                                <option value="8500">£8,500</option>
-                                                                <option value="8750">£8,750</option>
-                                                                <option value="9000">£9,000</option>
-                                                                <option value="9250">£9,250</option>
-                                                                <option value="9500">£9,500</option>
-                                                                <option value="9750">£9,750</option>
-                                                                <option value="10000">£10,000</option>
+                                                                <option value="1000">shs.100,000,000</option>
+                                                                <option value="1250">shs.1,250,000</option>
+                                                                <option value="1500">shs.1,500,000</option>
+                                                                <option value="1750">shs.1,750,000</option>
+                                                                <option value="2000">shs.2,000,000</option>
+                                                                <option value="2250">shs.2,250,000</option>
+                                                                <option value="2500">shs.2,500,000</option>
+                                                                <option value="2750">shs.2,750,000</option>
+                                                                <option value="3000">shs.3,000,000</option>
+                                                                <option value="3250">shs.3,250,000</option>
+                                                                <option value="3500">shs.3,500,000</option>
+                                                                <option value="3750">shs.3,750,000</option>
+                                                                <option value="4000">shs.4,000,000</option>
+                                                                <option value="4250">shs.4,250,000</option>
+                                                                <option value="4500">shs.4,500,000</option>
+                                                                <option value="4750">shs.4,750,000</option>
+                                                                <option value="5000">shs.5,000,000</option>
+                                                                <option value="5250">shs.5,250,000</option>
+                                                                <option value="5500">shs.5,500,000</option>
+                                                                <option value="5750">shs.5,750,000</option>
+                                                                <option value="6000">shs.6,000,000</option>
+                                                                <option value="6250">shs.6,250,000</option>
+                                                                <option value="6500">shs.6,500,000</option>
+                                                                <option value="6750">shs.6,750,000</option>
+                                                                <option value="7000">shs.7,000,000</option>
+                                                                <option value="7250">shs.7,250,000</option>
+                                                                <option value="7500">shs.7,500,000</option>
+                                                                <option value="7750">shs.7,750,000</option>
+                                                                <option value="8000">shs.8,000,000</option>
+                                                                <option value="8250">shs.8,250,000</option>
+                                                                <option value="8500">shs.8,500,000</option>
+                                                                <option value="8750">shs.8,750,000</option>
+                                                                <option value="9000">shs.9,000,000</option>
+                                                                <option value="9250">shs.9,250,000</option>
+                                                                <option value="9500">shs.9,500,000</option>
+                                                                <option value="9750">shs.9,750,000</option>
+                                                                <option value="10000">shs.10,000,000</option>
                                                             </select>                                                        
                                                         </div>
                                                     </div>
@@ -163,7 +162,7 @@
                                                     <div class="fm-control">
                                                     	<label class="label-control">Loan <b>Term</b> <em>*</em> </label>
                                                         <div class="select">
-                                                            <select name="term" id="term">
+                                                            <select id="loanTerm" name="term" required id="term">
                                                                 <option value="" selected="selected" disabled="disabled">Please select</option>
                                                                 <option value="12">12 months</option>
                                                                 <option value="18">18 months</option>
@@ -184,7 +183,7 @@
                                                     <div class="fm-control">
                                                     	<label class="label-control">Loan <b>Purpose</b> <em>*</em> </label>
                                                         <div class="select">
-                                                            <select name="loanPurpose" id="loanPurpose">
+                                                            <select name="loanPurpose" id="purpose">
                                                                 <option value="" selected="selected" disabled="disabled">Please select</option>
                                                                 <option value="3">Debt consolidation</option>
                                                                 <option value="2">Vehicle Repairs</option>
@@ -201,39 +200,9 @@
                                                 </div><!-- end cs-span6  -->
                                                 <div class="fm-section colm colm-span6">
                                                     <div class="fm-control">
-                                                    	<label class="label-control"><b>Repayment</b> day <em>*</em> </label>
-                                                        <div class="select">
-                                                            <select name="RepaymentDay" id="RepaymentDay">
-                                                                <option value="" selected="selected" disabled="disabled">Please select</option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="4">4</option>
-                                                                <option value="5">5</option>
-                                                                <option value="6">6</option>
-                                                                <option value="7">7</option>
-                                                                <option value="8">8</option>
-                                                                <option value="9">9</option>
-                                                                <option value="10">10</option>
-                                                                <option value="11">11</option>
-                                                                <option value="12">12</option>
-                                                                <option value="13">13</option>
-                                                                <option value="14">14</option>
-                                                                <option value="15">15</option>
-                                                                <option value="16">16</option>
-                                                                <option value="17">17</option>
-                                                                <option value="18">18</option>
-                                                                <option value="19">19</option>
-                                                                <option value="20">20</option>
-                                                                <option value="21">21</option>
-                                                                <option value="22">22</option>
-                                                                <option value="23">23</option>
-                                                                <option value="24">24</option>
-                                                                <option value="25">25</option>
-                                                                <option value="26">26</option>
-                                                                <option value="27">27</option>
-                                                                <option value="28">28</option>
-                                                            </select>                                                       
+                                                        <div class="fm-control">
+                                                                <label class="label-control"><b>Repayment</b> day <em>*</em> </label>
+                                                                <input id="repaymentDay" type="date" class="input" min="2000-11-14" min="2020-11-14"  placeholder="mm/dd/yyyy">
                                                         </div>
                                                     </div>                                       
                                                 </div><!-- end cs-span6 -->
@@ -247,7 +216,7 @@
                                                         You want to borrow:
                                                     </div>
                                                     <div class="colm colm-span6">
-                                                        <span id="amountVal">£3,000</span>
+                                                        <span id="amountVal">shs.3,000,000</span>
                                                     </div>
                                                 </div>
                                                 <div class="nt-row">
@@ -263,7 +232,7 @@
                                                         Repaying:
                                                     </div>
                                                     <div class="colm colm-span6">
-                                                        <span id="monthlyRepayment">£226.13</span> 
+                                                        <span id="monthlyRepayment">shs.226,130</span> 
                                                         <span class="thin">p/m</span>
                                                     </div>
                                                 </div>
@@ -272,7 +241,7 @@
                                                         Total repayable:
                                                     </div>
                                                     <div class="colm colm-span6">
-                                                        <span id="totalRepayment">£4,062.19</span>
+                                                        <span id="totalRepayment">shs.4,062,190</span>
                                                     </div>
                                                 </div>
                                                 <div class="nt-row">
@@ -346,19 +315,19 @@
                                             <div class="fm-section colm colm-span3">
                                                 <div class="fm-control">
                                                     <label class="label-control">First Name <em>*</em> </label>
-                                                    <input type="text" class="input"  placeholder="First Name">
+                                                    <input id="firstname" required type="text" class="input"  placeholder="First Name">
                                                 </div>                                       
                                             </div><!-- end cs-span3-->
                                             <div class="fm-section colm colm-span3">
                                                 <div class="fm-control">
                                                     <label class="label-control">Surname <em>*</em> </label>
-                                                    <input type="text" class="input"  placeholder="Surname">
+                                                    <input id="surname" required type="text" class="input"  placeholder="Surname">
                                                 </div>                                       
                                             </div><!-- end cs-span3--> 
                                             <div class="fm-section colm colm-span4">
                                                 <div class="fm-control">
                                                     <label class="label-control">Date Of Birth <em>*</em> </label>
-                                                    <input type="date" class="input" max="2000-11-14" min="1938-11-14"  placeholder="mm/dd/yyyy">
+                                                    <input id="dateOfBirth" required type="date" class="input" max="2000-11-14" min="1938-11-14"  placeholder="mm/dd/yyyy">
                                                 </div>                                       
                                             </div><!-- end cs-span4-->                                                                                        
                                         </div><!-- end .nt-row section -->                                      
@@ -376,13 +345,13 @@
                                             <div class="fm-section colm colm-span6">
                                                 <div class="fm-control">
                                                     <label class="label-control">Email <em>*</em> </label>
-                                                    <input type="text" class="input"  placeholder="Email">
+                                                    <input id="email" required type="email" class="input"  placeholder="Email">
                                                 </div>                                       
                                             </div><!-- end cs-span6--> 
                                             <div class="fm-section colm colm-span6">
                                                 <div class="fm-control">
                                                     <label class="label-control">Confirm Email <em>*</em> </label>
-                                                    <input type="text" class="input" placeholder="Confirm Email">
+                                                    <input id="confirmEmail" required type="email" class="input" placeholder="Confirm Email">
                                                 </div>                                       
                                             </div><!-- end cs-span6-->                                                                                        
                                         </div><!-- end .nt-row section --> 
@@ -390,19 +359,19 @@
                                             <div class="fm-section colm colm-span4">
                                                 <div class="fm-control">
                                                     <label class="label-control">Mobile Number <em>*</em> </label>
-                                                    <input type="text" class="input"  placeholder="Mobile">
+                                                    <input id="mobileNumber" required type="text" class="input"  placeholder="Mobile">
                                                 </div>                                       
                                             </div><!-- end cs-span4--> 
                                             <div class="fm-section colm colm-span4">
                                                 <div class="fm-control">
                                                     <label class="label-control">Home Number </label>
-                                                    <input type="text" class="input" placeholder="Home">
+                                                    <input id="homeNumber" required type="text" class="input" placeholder="Home">
                                                 </div>                                       
                                             </div><!-- end cs-span4-->
                                             <div class="fm-section colm colm-span4">
                                                 <div class="fm-control">
                                                     <label class="label-control">Work Number </label>
-                                                    <input type="text" class="input" placeholder="Work">
+                                                    <input id="workNumber" required type="text" class="input" placeholder="Work">
                                                 </div>                                       
                                             </div><!-- end cs-span4-->                                                                                                                                      
                                         </div><!-- end .nt-row section -->                                                                               
@@ -421,7 +390,7 @@
                                                 <div class="fm-control">
                                                     <label class="label-control">Residential Status <em>*</em> </label>
                                                     <div class="select">
-                                                        <select name="residentialStatus">
+                                                        <select id="residentialStatus" required name="residentialStatus">
                                                             <option value="" selected="selected" disabled="disabled">Please select</option>
                                                             <option value="1">Home Owner (Mortgage Single)</option>
                                                             <option value="2">Home Owner (Mortgage Joint)</option>
@@ -439,7 +408,7 @@
                                             <div class="fm-section colm colm-span6">
                                                 <div class="fm-control">
                                                     <label class="label-control">Current Postcode <em>*</em></label>
-                                                    <input type="text" class="input" placeholder="Current Postcode">
+                                                    <input id="postCode" type="text" class="input" placeholder="Current Postcode">
                                                 </div>                                      
                                             </div><!-- end cs-span6 -->
                                         </div><!-- end .nt-row section -->                                      
@@ -458,7 +427,7 @@
                                                 <div class="fm-control">
                                                     <label class="label-control">Employment Type <em>*</em> </label>
                                                     <div class="select">
-                                                        <select name="employmentType">
+                                                        <select id="employmentType" required name="employmentType">
                                                             <option value="" selected="selected" disabled="disabled">Please select</option>
                                                             <option value="1">Full Time Employee</option>
                                                             <option value="2">Part Time Employee</option>
@@ -480,7 +449,7 @@
                                                 <div class="fm-control">
                                                     <label class="label-control">Payment Frequency <em>*</em> </label>
                                                     <div class="select">
-                                                        <select name="paymentFrequency">
+                                                        <select id="paymentFrequency" required name="paymentFrequency">
                                                             <option value="" selected="selected" disabled="disabled">Please select</option>
                                                             <option value="1">daily</option>
                                                             <option value="2">weekly</option>
@@ -492,8 +461,8 @@
                                             </div><!-- end cs-span4 -->                                            
                                             <div class="fm-section colm colm-span4">
                                                 <div class="fm-control">
-                                                    <label class="label-control">Monthly income (£) <em>*</em></label>
-                                                    <input type="text" class="input" placeholder="Monthly income">
+                                                    <label class="label-control">Monthly income (shs) <em>*</em></label>
+                                                    <input id="monthlyIncome" type="text" class="input" placeholder="Monthly income">
                                                 </div>                                      
                                             </div><!-- end cs-span4 -->
                                         </div><!-- end .nt-row section -->                                      
@@ -508,32 +477,12 @@
                                 	<div class="colm colm-span9">
                                     	<div class="terms">
                                             <label class="lblt">
-                                                <input type="checkbox" name="termsAndConditions" required="required" data-type="checkbox" value="1">
+                                                <input id="didAcceptTerms" type="checkbox" name="termsAndConditions" required="required" data-type="checkbox" value="1">
                                                 I accept Buddy Loans <a href="#" target="_blank">Terms of Use</a>
                                                 and <a href="#" target="_blank">Privacy Notice</a>
                                                 and confirm that I am over 18 years old.
                                             </label>
-                                            <h6>Communication Preferences</h6>
-                                            <p>We'd like to keep you up to date with the latest products, services, 
-                                            and exclusive offers from Buddy Loans. We securely protect your data and DO 
-                                            NOT pass your information to anyone outside of Advancis Group of companies. 
-                                            If you wish to receive this information, please tick all or some of the 
-                                            boxes below.<br>You are welcome to unsubscribe at any time.</p> 
-                                            
-                                            <div class="f-checkbox">
-                                                <label class="checkbox-inline ">
-                                                    <input type="checkbox"  value="1"> Email
-                                                </label>
-                                                <label class="checkbox-inline ">
-                                                    <input type="checkbox" value="2"> SMS
-                                                </label>
-                                                <label class="checkbox-inline ">
-                                                    <input type="checkbox" value="3"> Telephone
-                                                </label>
-                                                <label class="checkbox-inline ">
-                                                    <input type="checkbox" value="4"> Post
-                                                </label>
-                                            </div>                                                                           
+                                                                                                                     
                                         </div>
                                     </div><!-- end cs-span9 -->
                                     <div class="colm colm-span3">
@@ -551,7 +500,7 @@
                                 who will discuss/process your application.</p>
                                 <div class="sub-btn">
                                     <div class="features-btn">
-                                        <button type="submit" class="btn-f btn-arrow">Get my loan</button>
+                                        <button onclick="apply()" type="submit" class="btn-f btn-arrow">Get my loan</button>
                                     </div><!-- features-btn --> 
                                 </div>
                             </div><!-- accept -->
@@ -656,6 +605,15 @@
         <!-- Load Javascript  -->
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugin.js"></script>       
-        <script type="text/javascript" src="js/main.js"></script>                         
+        <script type="text/javascript" src="js/main.js"></script>  
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#config-web-app --> 
+            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/application.js"></script>                       
     </body>
 </html>

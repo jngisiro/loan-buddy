@@ -64,3 +64,8 @@ function registerUser(){
         notice.style.visibility = "visible";
     }
 }
+
+function logout(){
+    firebase.auth().signOut()
+        .then(console.log("logged out"))
+}
