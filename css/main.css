@@ -1748,10 +1748,10 @@ ul.dropdown .stores a i{ position:relative; top:-2px; margin-right:4px; margin-l
     border-top: 1px solid #ddd;
 }
 
-.loan-table tr td:last-child {
+.loan-table tr td {
     color: #cff78a;
     font-family: 'GothamMediumRegular';
-    text-align: right;
+    text-align: center;
 }
 
 .nputs{ 

@@ -11,10 +11,23 @@ const loader = document.querySelector(".loader");
 const name = document.getElementById("name");
 const balance = document.getElementById("balance");
 
+const email = document.querySelector("#email");
+const _email = email.value;
+const confirmEmail = document.querySelector("#confirmEmail");
+const _confirmEmail = confirmEmail.value;
+const firstname = document.querySelector("#firstname");
+const _firstname = firstname.value; 
+const surname = document.querySelector("#surname");
+const _surname = surname.value;
+
 const user = firebase.database().ref("users/"+currentUser);
 user.on("value", function(snapshot){
     name.innerText = "Hi, " + snapshot.child("firstname").val() + " " + snapshot.child("lastname").val();
     balance.innerText = "Balance: shs." + snapshot.child("accBalance").val();
+    email.value = snapshot.child("email").val();
+    confirmEmail.value = snapshot.child("email").val();
+    firstname.value = snapshot.child("firstname").val();
+    surname.value = snapshot.child("lastname").val();
 
     loader.className += " hidden";
   })
@@ -35,21 +48,8 @@ function apply(){
     const title = document.querySelector("#title");
     const _title = title.options[title.selectedIndex].text;
 
-    const firstname = document.querySelector("#firstname");
-    const _firstname = firstname.value; 
-
-    const surname = document.querySelector("#surname");
-    const _surname = surname.value;
-
     const dateOfBirth = document.querySelector("#dateOfBirth");
     const _dateOfBirth = dateOfBirth.value;
-
-
-    const email = document.querySelector("#email");
-    const _email = email.value;
-
-    const confirmEmail = document.querySelector("#confirmEmail");
-    const _confirmEmail = confirmEmail.value;
 
     const mobileNumber = document.querySelector("#mobileNumber");
     const _mobileNumber = mobileNumber.value;
@@ -80,30 +80,28 @@ function apply(){
     const communicationPrefs = document.querySelector("#communicationPrefs");
 
 
-    if(!!_loanAmount && !!_loanTerm && !!_purpose && !!_repaymentDay && !!_title && !!_firstname &&
-        !!_surname && !!_dateOfBirth && !!_email && !!_confirmEmail && !!_mobileNumber && !!_residentialStatus &&
+    if(!!_loanAmount && !!_loanTerm && !!_purpose && !!_repaymentDay && !!_title && 
+        !!_dateOfBirth && !!_mobileNumber && !!_residentialStatus &&
         !!_postCode && !!_employmentType && !!_paymentFrequency && !!_monthlyIncome
         ){
             loader.classList.remove("hidden") 
-            firebaseRef = firebase.database().ref("applications");
             console.log(currentUser);
-            firebaseRef.child(currentUser).set({
-                loanAmount,
-                loanTerm,
-                purpose,
-                repaymentDay,
-                title,
-                firstname,
-                surname,
-                dateOfBirth,
-                email,
-                mobileNumber,
-                residentialStatus,
-                postCode,
-                employmentType,
-                paymentFrequency,
-                monthlyIncome,
-                didAcceptTerms
+            firebase.database().ref("applications/"+currentUser).set({
+                loanAmount : _loanAmount,
+                loanTerm : _loanTerm,
+                purpose : _purpose,
+                repaymentDay : _repaymentDay,
+                title : _title,
+                firstname : _firstname,
+                surname : _surname,
+                dateOfBirth : _dateOfBirth,
+                email : _email,
+                mobileNumber : _mobileNumber,
+                residentialStatus : _residentialStatus,
+                postCode : _postCode,
+                employmentType : _employmentType,
+                paymentFrequency : _paymentFrequency,
+                monthlyIncome : _monthlyIncome
             })
                 .then(function(){
                     console.log("Loan application success");
